@@ -56,6 +56,22 @@ Pessoas que buscam melhorar a saúde financeira, ter maior controle sobre seus g
 
 ---
 
+## 📊 Estrutura da Planilha de Lançamentos
+
+Para manter a consistência e permitir que o Fince processe os dados de forma precisa, a planilha de finanças pessoais de cada usuário deve seguir a seguinte estrutura de colunas:
+
+| Coluna | Tipo de Dado | Descrição | Exemplo |
+| :--- | :--- | :--- | :--- |
+| **Data** | Data (`DD/MM/AAAA`) | Quando a transação ocorreu | `11/06/2026` |
+| **Tipo** | Texto | Identificador do fluxo (`Receita`, `Despesa` ou `Investimento`) | `Despesa` |
+| **Categoria** | Texto | Um dos 5 grandes grupos de categorização do Fince | `Estilo de Vida e Lazer` |
+| **Subcategoria** | Texto | O item específico relacionado à categoria | `Lazer` |
+| **Descrição** | Texto | Detalhe rápido do gasto enviado pelo usuário | `Cinema com amigos` |
+| **Valor (R$)** | Decimal | Valor monetário (mantido positivo, sinalizado pelo Tipo) | `45,00` |
+| **Método de Pagamento** | Texto | Como foi pago (ex: `Pix`, `Cartão de Crédito`, `Débito`, `Dinheiro`) | `Cartão de Crédito` |
+
+---
+
 ## 🛠️ Componentes Técnicos
 
 | Componente | Tecnologia | Função |
