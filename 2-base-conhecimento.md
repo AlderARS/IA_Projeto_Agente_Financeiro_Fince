@@ -17,6 +17,7 @@ Os dados de inteligência financeira e base especializada para respostas técnic
   * [@primorico](https://www.youtube.com/@primorico)
   * [@jovensdenegocios](https://www.youtube.com/@jovensdenegocios)
   * [@brunoperini](https://www.youtube.com/@brunoperini)
+  * [@economistasincero](https://www.youtube.com/@economistasincero)
 * **Vídeos Audiobooks específicos para consulta:**
   * [Vídeo Audiobook 1](https://www.youtube.com/watch?v=RHblgzezekU)
   * [Vídeo Audiobook 2](https://www.youtube.com/watch?v=4_ULQHN2dLg)
