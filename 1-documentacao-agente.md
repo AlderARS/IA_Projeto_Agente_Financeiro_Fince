@@ -26,16 +26,25 @@ graph TD
 A dificuldade de gerenciar finanças pessoais diariamente e a falta de educação financeira prática.
 
 ### A Solução
-- **Criação e Atualização Automatizada de Planilhas:** O Fince pede uma planilha de finanças ou cria automaticamente uma planilha local para cada novo usuário e a deixa salva em sua memória. Ao longo do tempo, atualiza esses dados com base nas mensagens enviadas (ex: *"gastei 50 reais com Uber"*).
-- **Categorização Inteligente:** Ao registrar novas despesas e receitas, o Fince deve classificar automaticamente as transações sempre que receber novos dados (não deixa nenhuma coluna da tabela de finanças do usuário em branco).
-- **Onboarding Guiado (Primeiro Acesso):** Para o caso de precisar criar uma nova planilha de finanças o Fince, em vez de exigir o preenchimento de planilhas complexas, guia o usuário na criação do seu primeiro orçamento fazendo **5 perguntas-chave** (mas ele deverá perguntar antes se o usuário já tem uma tabela de controle financeiro ou se deseja criar uma):
+
+* **Análise de Planilhas:** O Fince oferece análises a partir de planilhas de finanças enviadas pelo usuário. Caso o usuário não possua um controle financeiro estruturado, o Fince o orienta desde o início, auxiliando na criação e organização do seu primeiro sistema de controle financeiro.
+
+* **Categorização Inteligente:** Ao receber um arquivo de controle financeiro, o Fince deve convertê-lo para o seu formato padrão. Quando necessário, utiliza categorização inteligente e transformação de dados para adequar as informações à estrutura definida, preservando a consistência e a integridade dos registros.
+
+* **Onboarding Guiado (Primeiro Acesso):** Quando for necessário criar uma nova planilha de finanças, o Fince deverá apresentar ao usuário os passos iniciais para a construção do seu controle financeiro. Antes disso, deverá perguntar se o usuário já possui uma tabela de controle financeiro ou se deseja ajuda para criar uma. Caso opte pela criação, o processo será conduzido por meio de **5 perguntas-chave**:
+
   1. Fontes de renda.
   2. Despesas fixas.
   3. Despesas variáveis (de forma geral).
   4. Pagamento de dívidas.
   5. Investimentos e reservas de emergência.
-- **Aconselhamento Proativo:** Ao iniciar qualquer interação, o Fince analisa a planilha do usuário buscando padrões de consumo, hábitos que podem ser melhorados e oportunidades de economia e diz ao usuário tanto os indicadores positivos como os negativos. Ele também inspira o usuário com citações de livros, especialistas e reflexões.
-- **Base de Conhecimento Estratégica:** Responde a perguntas técnicas ou específicas sobre finanças utilizando uma base de dados especializada do NotebookLM.
+
+* **Aconselhamento Proativo:** Ao iniciar qualquer interação, o Fince analisa a planilha do usuário em busca de padrões de consumo, hábitos que podem ser melhorados e oportunidades de economia. Com base nessa análise, apresenta tanto indicadores positivos quanto pontos de atenção, além de inspirar o usuário com citações de livros, especialistas e reflexões sobre educação financeira.
+
+* **Base de Conhecimento Estratégica:** O Fince responde a perguntas técnicas ou específicas sobre finanças utilizando uma base de dados especializada hospedada no NotebookLM, garantindo que suas respostas estejam alinhadas às fontes previamente definidas.
+
+* **Inteligência Econômica:** O Fince conta com uma base de conhecimento no NotebookLM contendo conteúdos atualizados e especializados sobre o universo financeiro. Essa base permite responder a diferentes questões relacionadas à economia, educação financeira e conceitos do mercado, sempre respeitando os limites e as fontes autorizadas pelo sistema.
+
 
 ### Público-Alvo
 Pessoas que buscam melhorar a saúde financeira, ter maior controle sobre seus gastos e aprender mais sobre finanças de maneira leve e contínua.
@@ -58,7 +67,7 @@ Pessoas que buscam melhorar a saúde financeira, ter maior controle sobre seus g
 
 ## 📊 Estrutura da Planilha de Lançamentos
 
-Para manter a consistência e permitir que o Fince processe os dados de forma precisa, a planilha de finanças pessoais de cada usuário deve seguir a seguinte estrutura de colunas:
+Para manter a consistência e permitir que o Fince processe os dados de forma precisa, a planilha de finanças pessoais enviada pelo usuário precisa ser convertida para a seguinte estrutura de colunas:
 
 | Coluna | Tipo de Dado | Descrição | Exemplo |
 | :--- | :--- | :--- | :--- |
@@ -88,7 +97,7 @@ Para garantir a confiabilidade dos dados e a segurança do usuário, o Fince seg
 
 ### Diretrizes de Operação
 * **Segmentação por Usuário:** Criação e manipulação de apenas **uma planilha por número de telefone**. O agente nunca mistura dados entre usuários diferentes.
-* **Fidelidade aos Dados:** As atualizações na tabela baseiam-se unicamente nas informações enviadas explicitamente pelo usuário. O agente não assume ou inventa valores.
+* **Fidelidade aos Dados:** Baseie-se unicamente nas informações enviadas explicitamente pelo usuário para realizar analises. O agente não assume ou inventa valores.
 * **Transparência:** Se o agente não souber de algo ou não tiver dados suficientes, ele deve admitir honestamente.
 * **Base do NotebookLM:** Utiliza fontes e referências confiáveis para buscar citações e conteúdos inspiradores, conselhos e responder perguntas mais específicas e técnicas (Link de referência: `https://notebooklm.google.com/notebook/bbbd5c4a-6356-4855-842a-d4628cbb44f2`).
 
