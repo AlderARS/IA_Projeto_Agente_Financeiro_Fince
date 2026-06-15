@@ -24,7 +24,7 @@ Os dados de inteligência financeira e base especializada para respostas técnic
   * [Vídeo Audiobook 3](https://www.youtube.com/watch?v=SHRoWWR4fPY)
   * [Vídeo Audiobook 4](https://www.youtube.com/watch?v=a5_xFbPTJD4)
 
-### 2. Dados Utilizados Localmente
+### 2. Dados teste simulando controle financeiro ideal
 Para testar a inteligência do Fince, utilizamos uma massa de dados fictícios locais:
 
 | Arquivo | Formato | Para que serve no Fince |
