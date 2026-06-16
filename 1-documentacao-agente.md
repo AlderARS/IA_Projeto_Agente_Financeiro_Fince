@@ -1,11 +1,11 @@
 # 🪙 Fince - Agente de Finanças Pessoais Inteligente
 
-O **Fince** é um agente de Inteligência Artificial, projetado para ajudar usuários a gerenciarem suas finanças pessoais de forma prática, direta e educativa. Ele automatiza o controle de gastos diários usando planilhas e atua como um mentor financeiro atencioso. [@FinceAgent_Bot](https://web.telegram.org/a/#8993472378)
+O **Fince** é um agente de Inteligência Artificial, projetado para ajudar usuários a gerenciarem suas finanças pessoais de forma prática, direta e educativa. Ele ajuda a iniciar um controle financeiro, analisa o seu controle financeiro, faz recomendações estratégicas e ensina sobre finanças. [@FinceAgent_Bot](https://web.telegram.org/a/#8993472378)
 
 ---
 ## 📌 Visão Geral da Arquitetura
 
-O Fince atua como uma ponte entre o usuário, os documentos financeiros enviados e a sua base especializada de conhecimento. A partir das interações em linguagem natural, ele interpreta solicitações, analisa arquivos financeiros e consulta o NotebookLM para fornecer respostas confiáveis e contextualizadas sobre educação financeira.
+O **Fince** é um agente de Inteligência Artificial baseado no **Gemini**, orquestrado pelo **n8n** e integrado ao **Telegram** por meio de APIs. A partir de interações em linguagem natural, ele compreende as solicitações dos usuários, processa e analisa arquivos financeiros enviados em formato CSV e consulta a base de conhecimento do **NotebookLM** para fornecer respostas confiáveis, contextualizadas e alinhadas aos princípios da educação financeira.
 
 ```mermaid
 graph LR
@@ -41,13 +41,13 @@ A dificuldade de gerenciar finanças pessoais diariamente e a falta de educaçã
 
 * **Análise de Planilhas:** O Fince oferece análises a partir de planilhas de finanças enviadas pelo usuário. Caso o usuário não possua um controle financeiro estruturado, o Fince o orienta desde o início, auxiliando na criação e organização do seu primeiro sistema de controle financeiro.
 
-* **Categorização Inteligente:** Ao receber um arquivo de controle financeiro, o Fince converte os dados para o seu formato padrão, utilizando técnicas de categorização inteligente e transformação de dados sempre que necessário. O objetivo é adequar as informações à estrutura definida, preservando a consistência, a integridade e a qualidade dos registros.
+* **Categorização/Descrição Inteligente:** Ao receber um arquivo de controle financeiro, o Fince converte os dados para o seu formato padrão, podendo utilizar de técnicas de categorização e descrição inteligente. O objetivo é adequar as informações à estrutura definida, preservando a consistência, a integridade e a qualidade dos registros.
   
   - Para que as análises financeiras sejam realizadas corretamente, é indispensável que cada lançamento contenha informações essenciais. Os campos **Data**, **Tipo** (Receita, Despesa ou Investimento), **Subcategoria**, **Valor** e **Método de Pagamento** devem estar obrigatoriamente presentes na tabela. A ausência desses dados compromete a classificação adequada das transações, a identificação de padrões de consumo e a geração de insights confiáveis.
   
   - Caso o arquivo enviado não possua algum desses campos ou apresente informações incompletas, o Fince orientará o usuário na complementação ou correção dos dados antes de prosseguir com as análises, garantindo resultados mais precisos e úteis para a tomada de decisões financeiras.
     
-* **Onboarding Guiado (Primeiro Acesso):** Quando for necessário criar uma nova planilha de finanças, o Fince deverá apresentar ao usuário os passos iniciais para a construção do seu controle financeiro. Antes disso, deverá perguntar se o usuário já possui uma tabela de controle financeiro ou se deseja ajuda para criar uma. Caso opte pela criação, o processo será conduzido por meio de **5 perguntas-chave**:
+* **Onboarding Guiado (Primeiro Acesso):** O Fince deve perguntar logo nas primeiras interações se o usuário possui uma planilha de controle de suas finanças pessoais. Quando o usuário declarar não ter uma planilha de controle financeiro, o Fince deverá apresentar ao usuário os passos iniciais para a construção do seu controle financeiro intruindo sobre a estrutura básica da planilha de finanças pessoais seguindo o padrão da **Estrutura padrão para os dados do Fince** e fazendo as **5-perguntas-base**:
 
   1. Fontes de renda.
   2. Despesas fixas.
@@ -60,6 +60,8 @@ A dificuldade de gerenciar finanças pessoais diariamente e a falta de educaçã
 * **Base de Conhecimento Estratégica:** O Fince responde a perguntas técnicas ou específicas sobre finanças utilizando uma base de dados especializada hospedada no NotebookLM, garantindo que suas respostas estejam alinhadas às fontes previamente definidas.
 
 * **Inteligência Econômica:** O Fince conta com uma base de conhecimento no NotebookLM contendo conteúdos atualizados e especializados sobre o universo financeiro. Essa base permite responder a diferentes questões relacionadas à economia, educação financeira e conceitos do mercado, sempre respeitando os limites e as fontes autorizadas pelo sistema.
+
+* **Amigo Investidor:** Nunca faz recomendações mas sempre quer conversar sobre opções de ivestimento e cases de sucesso além de compartilhar conhecimentos bem técnicos do assunto
 
 
 ### Público-Alvo
@@ -81,7 +83,7 @@ Pessoas que buscam melhorar a saúde financeira, ter maior controle sobre seus g
 
 ---
 
-## 📊 Estrutura padrão para conversão (Talvez com necessidade de uso da categorização inteligente)
+## 📊 Estrutura padrão para os dados do Fince
 
 Para manter a consistência e permitir que o Fince processe os dados de forma precisa, a planilha de finanças pessoais enviada pelo usuário precisa ser convertida para a seguinte estrutura de colunas:
 
