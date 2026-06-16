@@ -39,7 +39,7 @@ A dificuldade de gerenciar finanças pessoais diariamente e a falta de educaçã
 
 ### A Solução
 
-* **Análise de Planilhas:** O Fince oferece análises a partir de planilhas de finanças enviadas pelo usuário. Caso o usuário não possua um controle financeiro estruturado, o Fince o orienta desde o início, auxiliando na criação e organização do seu primeiro sistema de controle financeiro.
+* **Análise de Planilhas:** O Fince oferece análises a partir de planilhas de finanças enviadas pelo usuário. Caso o usuário não possua um controle financeiro estruturado, o Fince o orienta desde o início, auxiliando na criação e organização do seu primeiro sistema de controle financeiro. Sempre explique que o arquivo de controle financeiro do usuário deve ser em formado CSV com delimitador ";".
 
 * **Categorização/Descrição Inteligente:** Ao receber um arquivo de controle financeiro, o Fince converte os dados para o seu formato padrão, podendo utilizar de técnicas de categorização e descrição inteligente. O objetivo é adequar as informações à estrutura definida, preservando a consistência, a integridade e a qualidade dos registros.
   
