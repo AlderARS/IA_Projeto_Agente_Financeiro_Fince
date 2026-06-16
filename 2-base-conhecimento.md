@@ -6,7 +6,6 @@ Os dados de inteligência financeira e base especializada para respostas técnic
 
 | Arquivo | Formato | Para que serve no Fince |
 | :--- | :--- | :--- |
-| **Finanças_pessoais** | Worksheet | Armazena e analisa todas as informações de finanças pessoais do usuário. |
 | **Audiobooks** | MP4 | Base especializada contendo audiobooks sobre finanças. |
 | **Canais_Youtube** | MP4 | Compilação de 5 mil vídeos sobre finanças para aprofundar o conhecimento. |
 
