@@ -8,17 +8,79 @@ O **Fince** é um agente de Inteligência Artificial, projetado para ajudar usu�
 O Fince atua como uma ponte entre o usuário, os documentos financeiros enviados e a sua base especializada de conhecimento. A partir das interações em linguagem natural, ele interpreta solicitações, analisa arquivos financeiros e consulta o NotebookLM para fornecer respostas confiáveis e contextualizadas sobre educação financeira.
 
 ```mermaid
-graph TD
-    Usuario[👤 Usuário]
-    Agente[🤖 Agente de I.A. - Fince <br> Gemini Flash]
-    Arquivos[📊 Arquivos Financeiros <br> Excel / CSV enviados pelo usuário]
-    NotebookLM[📚 Base de Conhecimento <br> NotebookLM]
+graph LR
 
-    Usuario <-->|Conversa em linguagem natural| Agente
-    Arquivos <-->|Análise e processamento de dados| Agente
-    Agente <-->|Consultas e recuperação de conhecimento| NotebookLM
+    %% Usuário
+    U[👤 Usuário]
+
+    %% Canais
+    TG[📨 Telegram Bot API]
+    WA[💬 WhatsApp API]
+    WEB[🌐 Web App / Dashboard]
+
+    %% Orquestração
+    N8N[⚙️ n8n<br>Orquestrador de Fluxos]
+
+    %% Inteligência
+    AG[🤖 Fince AI Agent]
+    GEM[🧠 Gemini Flash]
+
+    %% Conhecimento e memória
+    NBLM[📚 NotebookLM<br>Base de Conhecimento]
+    MEM[🧠 Memória Conversacional]
+    DB[(🗄️ Banco de Dados<br>PostgreSQL / Supabase)]
+
+    %% Arquivos
+    FILES[📊 Arquivos Financeiros<br>CSV • XLSX • PDF]
+    EXTRACT[🔎 Extração e Padronização<br>de Dados Financeiros]
+
+    %% APIs externas
+    API[🔗 APIs Financeiras<br>Cotação • Open Finance • Bancos]
+
+    %% Relatórios
+    ANALYTICS[📈 Motor de Análises]
+    REPORTS[📄 Relatórios e Insights]
+
+    %% Fluxo de entrada
+    U --> TG
+    U --> WA
+    U --> WEB
+
+    TG --> N8N
+    WA --> N8N
+    WEB --> N8N
+
+    %% Conversa
+    N8N --> AG
+    AG --> GEM
+    AG --> MEM
+    MEM --> DB
+
+    %% Conhecimento
+    AG <--> NBLM
+
+    %% Arquivos
+    U --> FILES
+    FILES --> N8N
+    N8N --> EXTRACT
+    EXTRACT --> ANALYTICS
+    ANALYTICS --> DB
+
+    %% APIs externas
+    N8N <--> API
+
+    %% Resultados
+    ANALYTICS --> REPORTS
+    DB --> REPORTS
+
+    REPORTS --> AG
+    AG --> N8N
+
+    %% Respostas
+    N8N --> TG
+    N8N --> WA
+    N8N --> WEB
 ```
-
 ### Responsabilidades do Fince
 
 * 💬 **Interação Conversacional:** Mantém um diálogo natural e contínuo com o usuário, oferecendo suporte, esclarecendo dúvidas e guiando suas ações relacionadas às finanças pessoais.
