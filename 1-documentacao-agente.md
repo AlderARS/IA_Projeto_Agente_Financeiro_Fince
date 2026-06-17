@@ -19,7 +19,7 @@ graph LR
     S -->|"📊 CSV"| C["📄 Extrair CSV"]
     C --> A
 
-    S -->|"💬 + 📊 Texto + CSV"| M["📄 Extrair CSV<br/>+ Combinar com a mensagem"]
+    S -->|"Texto + CSV"| M["📄 Extrair CSV<br/>+ Combinar com a mensagem"]
     M --> A
 
     A --> R["✉️ Enviar resposta"]
