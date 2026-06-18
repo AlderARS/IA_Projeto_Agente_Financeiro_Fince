@@ -3,6 +3,7 @@
 O **Fince** é um agente de Inteligência Artificial, projetado para ajudar usuários a gerenciarem suas finanças pessoais de forma prática, direta e educativa. Ele ajuda a iniciar um controle financeiro, analisa o seu controle financeiro, faz recomendações estratégicas e ensina sobre finanças. [@FinceAgent_Bot](https://web.telegram.org/a/#8993472378)
 
 ---
+
 ## 📌 Visão Geral da Arquitetura
 
 O **Fince** é um agente de Inteligência Artificial baseado no **Gemini**, orquestrado pelo **n8n** e integrado ao **Telegram** por meio de APIs. A partir de interações em linguagem natural, ele compreende as solicitações dos usuários, processa e analisa arquivos financeiros enviados em formato CSV e consulta a base de conhecimento do **NotebookLM** para fornecer respostas confiáveis, contextualizadas e alinhadas aos princípios da educação financeira.
@@ -26,6 +27,8 @@ graph LR
     R --> T
     T --> U
 ```
+
+---
 
 ### Responsabilidades do Fince
 
