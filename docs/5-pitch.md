@@ -89,12 +89,12 @@ Além de ensinar, o Fince analisa os registros financeiros do usuário para iden
 
 ## ✅ Checklist da Apresentação
 
-* [ ] Duração máxima de 3 minutos
-* [ ] Problema claramente apresentado
-* [ ] Solução demonstrada na prática
-* [ ] Demonstração funcional do sistema
-* [ ] Diferenciais destacados
-* [ ] Áudio e vídeo com boa qualidade
+* [x] Duração máxima de 3 minutos
+* [x] Problema claramente apresentado
+* [x] Solução demonstrada na prática
+* [x] Demonstração funcional do sistema
+* [x] Diferenciais destacados
+* [x] Áudio e vídeo com boa qualidade
 
 ---
 
